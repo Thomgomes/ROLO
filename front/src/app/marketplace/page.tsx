@@ -1,9 +1,10 @@
-import { Box, Typography } from '@mui/material';
+import RoloLayout from '@/components/layout';
+import { Typography } from '@mui/material';
 
 export default function MarketPlace() {
   return (
-    <Box>
-      <Typography variant='h3'>MarketPlace</Typography>
-    </Box>
+    <RoloLayout>
+      <Typography variant='h1'>Marketplace</Typography>
+    </RoloLayout>
   );
 }

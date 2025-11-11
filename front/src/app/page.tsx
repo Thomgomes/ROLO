@@ -1,7 +1,5 @@
-import MarketPlace from "./marketplace/page";
+import MarketPlace from './marketplace/page';
 
 export default function Home() {
-  return (
-    <MarketPlace />
-  );
+  return <MarketPlace />;
 }
