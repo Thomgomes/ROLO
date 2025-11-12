@@ -1,6 +1,12 @@
 import { createTheme } from '@mui/material';
 import palette from './palette';
 
+declare module '@mui/material/styles' {
+  interface BreakpointOverrides {
+    xxl: true;
+  }
+}
+
 const theme = createTheme({
   palette,
   typography: {
@@ -26,6 +32,16 @@ const theme = createTheme({
     },
     body2: {
       fontSize: '16px',
+    },
+  },
+  breakpoints: {
+    values: {
+      xs: 0,
+      sm: 400,
+      md: 700,
+      lg: 1024,
+      xl: 1440,
+      xxl: 1536,
     },
   },
 });
