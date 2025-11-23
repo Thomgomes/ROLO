@@ -1,3 +1,4 @@
+import CategoryButton from '@/components/CategoryButton';
 import { BannerCarousel } from '@/components/carousel';
 import SearchBar from '@/components/SearchBar';
 import bannerData from '@/mockData/banner';
@@ -6,7 +7,6 @@ import productsData from '@/mockData/products';
 import {
   Avatar,
   Box,
-  Button,
   Card,
   CardContent,
   CardMedia,
@@ -49,31 +49,7 @@ export default function MarketPlace() {
             justifyContent: 'space-around',
           }}
         >
-          {categorieData.map((categorie, index) => (
-            <Button
-              key={index}
-              sx={{ display: 'flex', flexDirection: 'column', gap: '0.25rem' }}
-            >
-              <Box
-                component='img'
-                src={categorie.img}
-                alt='Icone da Categoria'
-                sx={{
-                  width: '2rem',
-                  height: '2rem',
-                  borderRadius: '0.5rem',
-                  boxShadow: '1px 1px 2px',
-                }}
-              />
-              <Typography
-                variant='body2'
-                color='textSecondary'
-                sx={{ fontSize: 14 }}
-              >
-                {categorie.name}
-              </Typography>
-            </Button>
-          ))}
+          <CategoryButton categories={categorieData} />
         </Box>
         <Grid
           container
