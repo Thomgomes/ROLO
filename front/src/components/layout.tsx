@@ -46,7 +46,10 @@ export default function RoloLayout({ children }: layoutProps) {
             component='img'
             src='/logo.svg'
             alt='Rolo Logo'
-            sx={{ height: 40, width: 40 }}
+            sx={{
+              height: { xs: 40, md: 36 },
+              width: { xs: 40, md: 36 },
+            }}
           />
         </Link>
         <Toolbar disableGutters>
@@ -74,7 +77,9 @@ export default function RoloLayout({ children }: layoutProps) {
         open={openDrawer}
         onClose={() => setOpenDrawer(!openDrawer)}
         anchor='right'
-        slotProps={{ paper: { sx: { width: '80%', padding: 2 } } }}
+        slotProps={{
+          paper: { sx: { width: { sm: '80%', md: 300 }, padding: 2 } },
+        }}
       >
         <Link
           href={'/auth'}
