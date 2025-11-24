@@ -48,6 +48,11 @@ export default function MarketPlace() {
             display: 'flex',
             flexDirection: 'row',
             justifyContent: 'space-around',
+            gap: 2,
+            overflowX: 'auto',
+            paddingY: '0.5rem',
+            marginX: '-0.5rem',
+            '&::-webkit-scrollbar': { display: 'none' },
           }}
         >
           <CategoryButton categories={categorieData} />
