@@ -38,7 +38,9 @@ export default function RoloLayout({ children }: layoutProps) {
           flexDirection: 'row',
           justifyContent: 'space-between',
           alignItems: 'center',
-          padding: 2,
+          paddingLeft: { xs: 1, md: 2, },
+          paddingRight: { xs: 1, md: 2, },
+          paddingTop: { xs: 2, md: 1, },
         }}
       >
         <Link href='/'>
@@ -46,7 +48,9 @@ export default function RoloLayout({ children }: layoutProps) {
             component='img'
             src='/logo.svg'
             alt='Rolo Logo'
-            sx={{ height: 40, width: 40 }}
+            sx={{
+              width: 32,
+            }}
           />
         </Link>
         <Toolbar disableGutters>
@@ -74,7 +78,9 @@ export default function RoloLayout({ children }: layoutProps) {
         open={openDrawer}
         onClose={() => setOpenDrawer(!openDrawer)}
         anchor='right'
-        slotProps={{ paper: { sx: { width: '80%', padding: 2 } } }}
+        slotProps={{
+          paper: { sx: { width: { sm: '80%', md: 300 }, padding: 2 } },
+        }}
       >
         <Link
           href={'/auth'}

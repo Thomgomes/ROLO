@@ -13,7 +13,7 @@ export default function SearchBar({ placeholder }: { placeholder?: string }) {
         input: {
           startAdornment: (
             <InputAdornment position='start'>
-              <Search />
+              <Search sx={{ color: '#FE733B' }}/>
             </InputAdornment>
           ),
         },
