@@ -41,8 +41,6 @@ export default function ProductCard({ product }: { product: ProductProps }) {
           sx={{
             display: 'flex',
             flexDirection: 'row',
-            width: '100%',
-            justifyContent: 'space-between',
             alignItems: 'center',
             gap: 1,
           }}
@@ -60,7 +58,7 @@ export default function ProductCard({ product }: { product: ProductProps }) {
           component='div'
           sx={{
             display: 'flex',
-            flexDirection: 'column',
+            flexDirection: 'row',
             justifyContent: 'space-between',
           }}
         >
